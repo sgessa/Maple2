@@ -1,6 +1,6 @@
 services:
   # One-shot DB migration + metadata ingestion. Runs manually, not with the stack.
-  #   sudo docker compose --profile ingest up file-ingest
+  #   docker compose --profile ingest run --rm file-ingest
   file-ingest:
     profiles: ["ingest"]
     image: mcr.microsoft.com/dotnet/sdk:8.0
