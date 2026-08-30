@@ -156,7 +156,7 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - 4001:4001
+      - "${WEB_PORT:-4000}:${WEB_PORT:-4000}"
     env_file:
       - .env
     environment:
